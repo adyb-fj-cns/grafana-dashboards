@@ -28,7 +28,7 @@ local traffic =
   );
 
 dashboard.new(
-  'Prometheus test',
+  'Jenkins Pipeline - Network',
   tags=['prometheus'],
   schemaVersion=18,
   editable=true,
