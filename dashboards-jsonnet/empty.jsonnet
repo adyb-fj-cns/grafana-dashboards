@@ -1,3 +1,7 @@
 local grafana = import 'grafonnet/grafana.libsonnet';
+local dashboard = grafana.dashboard;
 
-grafana.dashboard.new('Jenkins Pipeline - Empty Dashboard')
+dashboard.new(
+  'Jenkins Pipeline - Empty',
+  tags=['jenkins']  
+)

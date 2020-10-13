@@ -29,7 +29,7 @@ local traffic =
 
 dashboard.new(
   'Jenkins Pipeline - Network',
-  tags=['prometheus'],
+  tags=['prometheus','jenkins'],
   schemaVersion=18,
   editable=true,
   time_from='now-1h',
