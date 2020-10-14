@@ -19,6 +19,8 @@ spec:
         cpu: "200m"  
 """) {
     node(POD_LABEL) {
+        git branch: 'main', url: 'https://github.com/adyb-fj-cns/grafana-dashboards'
+        
         def lib = library (
             identifier: 'my-shared-library@main'
         
