@@ -9,11 +9,13 @@ podTemplate(containers: [
         )
 
         convertDashboards {
+            stageName = 'Convert Jsonnet'
             containerName = 'grafonnet'
             sourceDir = 'dashboards-jsonnet'
         }
 
         uploadDashboards {
+            stageName = 'Upload to Dev Grafana'
             containerName = 'grafonnet'
             credentialsId = 'grafana'
             sourceDir = 'dashboards-jsonnet'
