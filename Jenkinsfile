@@ -27,7 +27,7 @@ spec:
         )
 
         convertDashboards {
-            sourceDashboards = 'dashboards-jsonnet'
+            sourceDir = 'dashboards-jsonnet'
         }
 
         uploadDashboards {
