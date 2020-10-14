@@ -26,9 +26,14 @@ spec:
         
         )
 
-        convertDashboards {}
+        convertDashboards {
+            sourceDashboards = 'dashboards-jsonnet'
+        }
 
-        uploadDashboards {}
+        uploadDashboards {
+            credentialsId = 'grafana'
+            grafanaUrl = 'grafana-ui:3000'
+        }
        
     }
 
