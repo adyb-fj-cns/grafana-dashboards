@@ -13,7 +13,7 @@ podTemplate(containers: [
             containerName = 'grafonnet'
             sourceDir = 'dashboards-jsonnet'
         }
-
+        
         uploadDashboards {
             stageName = 'Upload to Dev Grafana'
             containerName = 'grafonnet'
