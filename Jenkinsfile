@@ -23,7 +23,6 @@ spec:
 
         def lib = library (
             identifier: 'my-shared-library@main'
-        
         )
 
         convertDashboards {
@@ -32,6 +31,7 @@ spec:
 
         uploadDashboards {
             credentialsId = 'grafana'
+            sourceDir = 'dashboards-jsonnet'
             grafanaUrl = 'grafana-ui:3000'
         }
        
