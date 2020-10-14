@@ -18,7 +18,7 @@ spec:
         memory: "64Mi"
         cpu: "200m"  
 """) {
-    node {
+    node(POD_LABEL) {
         def lib = library (
             identifier: 'my-shared-library@main'
         
