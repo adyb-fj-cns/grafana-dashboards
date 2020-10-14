@@ -26,10 +26,12 @@ spec:
         )
 
         convertDashboards {
+            containerName = 'grafonnet'
             sourceDir = 'dashboards-jsonnet'
         }
 
         uploadDashboards {
+            containerName = 'grafonnet'
             credentialsId = 'grafana'
             sourceDir = 'dashboards-jsonnet'
             grafanaUrl = 'grafana-ui:3000'
