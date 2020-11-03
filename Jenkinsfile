@@ -4,8 +4,9 @@ podTemplate(containers: [
     node(POD_LABEL) {
         git branch: 'main', url: 'https://github.com/adyb-fj-cns/grafana-dashboards'
 
-        def lib = library (
-            identifier: 'my-shared-library@main'
+        library identifier: 'dynamic-shared-library@main', retriever: modernSCM(
+            [$class: 'GitSCMSource',
+            remote: 'https://github.com/adyb-fj-cns/jenkins-shared-library']
         )
 
         convertDashboards {
@@ -19,7 +20,7 @@ podTemplate(containers: [
             containerName = 'grafonnet'
             credentialsId = 'grafana'
             sourceDir = 'dashboards-jsonnet'
-            grafanaUrl = 'grafana-ui:3000'
+            grafanaUrl = 'grafana:3000'
         }    
     }
 }
